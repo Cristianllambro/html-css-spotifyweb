@@ -38,9 +38,31 @@ span{
     display: inline-block;
 }
 
-/* header */
 
-.header-btn{
+/* HEADER */
+
+.head-content{
+    display: flex;
+    flex-direction: column;
+}
+
+.logo{
+    justify-content: start;
+    
+}
+
+.logo img{
+    width: 200px;
+}
+
+
+
+
+
+
+/* MAIN */
+
+.top-btn{
     width: calc(100vw - 250px);
     height: 4em;
     background-color: rgba(0, 0, 0, 0.4);
@@ -53,7 +75,7 @@ span{
     
 }
 
-.header-btn a {
+.top-btn a {
     padding: .8em;
     text-decoration: none;
     color: white;
@@ -63,7 +85,7 @@ span{
     margin-right: 1em;
 }
 
-.header-btn a:hover{
+.top-btn a:hover{
     transform: scale(1.1);
 }
 
