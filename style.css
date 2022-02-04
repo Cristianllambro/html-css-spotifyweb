@@ -18,7 +18,7 @@ header{
     height: calc(100vh - 6em);
     background-color: black;
     display: flex;
-    flex: 0 0 auto
+    flex: 0 0 auto;
 }
 
 main{
@@ -83,6 +83,10 @@ main ul li a{
     color: #595d63;
 }
 
+main ul li a:hover{
+    color: white;
+}
+
 .green{
     width: 40px;
     height: 2px;
@@ -97,7 +101,7 @@ h2{
     width: 100%;
 }
 
-.content-top{
+.content{
     margin-top: 2em;
     margin-left: 1.2em;
     display: flex;
@@ -105,14 +109,33 @@ h2{
     flex-wrap: wrap;
 }
 
-.card img{
-    max-width: 250px;
-}
-
 .card{
     width: calc(100% / 6 - 1em);
+    min-width: 200px;
     margin-right: 1em;
     margin-bottom: 1em;
+    position: relative;
+}
+
+.card img{
+    width: 100%;
+}
+
+.fa-play-circle{
+    font-size: 60px;
+    position: absolute;
+    top: 33%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+}
+
+.card img:hover{
+    opacity: 0.5;
+}
+
+.content .card .fa-play-circle:hover{
+    visibility: visible;
 }
 
 p{
@@ -126,4 +149,21 @@ p{
 
 .subtitle{
     color: #595d63;
+}
+
+.content-mid h2, .sub-left{
+    width: 100%;
+}
+
+.content-mid h2{
+    margin-bottom: .7em;
+}
+
+.sub-left{
+    color: #595d63;
+    margin-bottom: 2em;
+}
+
+.img-cir{
+    border-radius: 50%;
 }
