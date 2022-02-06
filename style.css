@@ -314,8 +314,12 @@ p{
 
 .song .album img{
     width: 40px;
+    vertical-align: middle;
 }
 
+.album p{
+    display: inline-block;
+}
 .icon-music{
     font-size: 17px;
     text-align: center;
@@ -343,18 +347,10 @@ p{
     height: 4px;
     background-color: rgb(90, 90, 90);
     border-radius: 3px;
-    display: inline-block;
     margin: 0 1em 0 1em;
+    display: inline-block;
+    vertical-align: middle;
 
-}
-
-
-
-
-
-
-.volume{
-    display: flex;
 }
 
 .volume .fa-list, 
@@ -371,6 +367,9 @@ p{
     background-color: rgb(90, 90, 90);
     border-radius: 3px;
     margin-right: .8em;
+    display: inline-block;
+    vertical-align: middle;
+
 }
 
 .volume-song-less{
@@ -378,4 +377,7 @@ p{
     height: 4px;
     background-color: rgb(193, 193, 193);
     border-radius: 3px;
+    display: inline-block;
+    vertical-align: middle;
+
 }
