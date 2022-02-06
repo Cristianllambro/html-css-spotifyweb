@@ -14,7 +14,7 @@
 }
 
 header{
-    width: 250px;
+    width: 220px;
     height: calc(100vh - 6em);
     background-color: black;
     display: flex;
@@ -22,7 +22,7 @@ header{
 }
 
 main{
-    width: calc(100vw - 250px);
+    width: calc(100vw - 220px);
     height: calc(100vh - 6em);
     background-color: #141922;
     overflow-y: auto;
@@ -44,12 +44,15 @@ span{
 .head-content{
     display: flex;
     flex-direction: column;
-    margin-left: 1em;
+    color: #999999;
+    justify-content: space-between;
+    flex: 0 0 100%;
 }
 
 .logo{
     justify-content: start;
     margin-top: 1em;
+    padding-left: 1em;
     
 }
 
@@ -61,12 +64,18 @@ span{
 .search li{
     list-style: none;
     font-size: 14px;
-    padding: .5em 0 .5em 0;
+    margin: .5em 0 1.2em 0;
+}
+
+.search li:first-child{
+    border-left: 2px solid #9ae32e;
 }
 
 .search i{
-    font-size: 25px;
+    font-size: 20px;
     color: #999999;
+    padding-left: 1em;
+    padding-right: .3em;
 }
 
 .search li a{
@@ -79,14 +88,95 @@ span{
 }
 
 .head-content h4{
-    margin: 1em 0 .5em 0;
+    margin: 1.3em 0 .5em 1em;
 }
 
+.add-play{
+    background-color: black;
+    border: none;
+    font-size: 15px;
+    margin-left: 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    margin-left: 1em;
+    color: #999999;
+}
+
+.add-play:hover{
+    color: white;
+}
+
+.add-play .bi-plus-square-fill:hover{
+    color: white;
+}
+
+.bi-plus-square-fill{
+    font-size: 30px;
+    padding-right: .5em;
+    color: #999999;
+}
+
+.name-play{
+    padding-left: 1em;
+    list-style: none;
+}
+
+.name-play li{
+    font-size: 14px;
+    padding-top: 1em;
+    color: #999999;
+    cursor: pointer;
+}
+
+.name-play li:hover{
+    color: white;
+}
+
+.end-header{
+    margin-left: 1em;
+    margin-bottom: .3em;
+}
+
+.install-app{
+    font-size: 12px;
+    padding-bottom: .5em;
+    color: #999999;
+    cursor: pointer;
+}
+
+.install-app:hover{
+    color: white;
+
+}
+
+.bi-arrow-down-circle{
+    color: #999999;
+}
+
+.install-app .bi-arrow-down-circle{
+    padding-right: .5em;
+}
+
+.line{
+    width: 93%;
+    border: 1px solid #999999;
+}
+
+.user{
+    padding-top: .5em;
+}
+
+.bi-person-circle{
+    font-size: 23px;
+    color: #999999;
+    text-align: center;
+}
 
 /* MAIN */
 
 .top-btn{
-    width: calc(100vw - 250px);
+    width: calc(100vw - 220px);
     height: 4em;
     background-color: rgba(0, 0, 0, 0.4);
     
@@ -211,4 +301,17 @@ p{
 
 .img-cir{
     border-radius: 50%;
+}
+
+/* FOOTER */
+
+.content-foot{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.song .album img{
+    width: 60px;
 }
