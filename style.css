@@ -19,6 +19,7 @@ header{
     background-color: black;
     display: flex;
     flex: 0 0 auto;
+    overflow: hidden;
 }
 
 main{
@@ -193,7 +194,7 @@ span{
     align-items: center;
 
     position: fixed;
-    
+    z-index: 10;
 }
 
 .top-btn a {
@@ -254,16 +255,9 @@ h2{
 
 .card{
     width: calc(100% / 6 - 1em);
-    min-width: 200px;
     margin-right: 1em;
     margin-bottom: 1em;
     position: relative;
-    flex: 1 1 auto;
-}
-
-
-.size .card{
-    flex: 0 1 auto;
 }
 
 .card img{
@@ -320,18 +314,22 @@ p{
 /* FOOTER */
 
 .content-foot{
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 6em;
 }
 
-.album{
-    display: flex;
-    justify-content: space-around;
+.song{
+    width: 15%;
 }
 
-.song .album img{
+.album{
+    display: flex;
+}
+
+.album img{
     width: 40px;
     vertical-align: middle;
     padding-left: .5em;
@@ -359,6 +357,10 @@ p{
     margin-left: .8rem;
 }
 
+.btn-music{
+    width: 70%;
+}
+
 .icon-music{
     font-size: 17px;
     text-align: center;
@@ -378,8 +380,10 @@ p{
 }
 
 .icon-btn{
+    width: 100%;
     display: flex;
     margin-bottom: .7em;
+    justify-content: center;
 }
 
 .time-song{
@@ -392,17 +396,16 @@ p{
     background-color: rgb(90, 90, 90);
     border-radius: 3px;
     margin: 0 1em 0 1em;
-    display: inline-block;
-    vertical-align: middle;
+    display: inline;
 }
 
 .time-less-one{
-    width: 150px;
+    width: 100px;
     height: 4px;
     background-color: rgb(193, 193, 193);
     border-radius: 3px;
     margin: 0 1em 0 1em;
-    display: inline-block;
+    display: inline;
     vertical-align: middle;
     position: absolute;
     top: 53%;
@@ -418,10 +421,12 @@ p{
 
 .volume{
     display: flex;
+    width: 15%;
 }
 
-.volume-over{
+.volume-over-one{
     position: relative;
+
 }
 
 .volume-song{
@@ -432,7 +437,7 @@ p{
     margin-right: .8em;
     display: inline-block;
     vertical-align: middle;
-
+    flex: 1 2 auto;
 }
 
 .volume-song-less{
@@ -445,4 +450,18 @@ p{
     position: absolute;
     top: 53%;
     left: 0;
+    flex: 1 2 auto;
+}
+
+
+/* media query */
+
+@media screen and (max-width: 992px) {
+    .card{
+        width: calc(100% /6 - 1em);
+    }
+}
+
+@media screen and (max-width: 768) {
+    
 }
