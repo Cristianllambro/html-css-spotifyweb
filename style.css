@@ -61,6 +61,14 @@ span{
     margin-bottom: 1.5em;
 }
 
+.search li img{
+    width: 45px;
+    color: #999999;
+    padding-left: 1rem;
+    padding-right: .3rem;
+    vertical-align: middle;
+}
+
 .search li{
     list-style: none;
     font-size: 14px;
@@ -69,13 +77,6 @@ span{
 
 .search li:first-child{
     border-left: 2px solid #9ae32e;
-}
-
-.search i{
-    font-size: 20px;
-    color: #999999;
-    padding-left: 1em;
-    padding-right: .3em;
 }
 
 .search li a{
@@ -140,7 +141,7 @@ span{
 
 .install-app{
     font-size: 12px;
-    padding-bottom: .5em;
+    padding-bottom: .6em;
     color: #999999;
     cursor: pointer;
 }
@@ -165,12 +166,19 @@ span{
 
 .user{
     padding-top: .5em;
+    padding-bottom: .3em;
 }
 
-.bi-person-circle{
-    font-size: 23px;
-    color: #999999;
+.logo-user{
+    width: 20px;
+    height: 20px;
     text-align: center;
+    background-color: #999999;
+    border-radius: 50%;
+}
+
+.logo-user img{
+    width: 15px;
 }
 
 /* MAIN */
@@ -250,6 +258,12 @@ h2{
     margin-right: 1em;
     margin-bottom: 1em;
     position: relative;
+    flex: 1 1 auto;
+}
+
+
+.size .card{
+    flex: 0 1 auto;
 }
 
 .card img{
@@ -315,6 +329,7 @@ p{
 .song .album img{
     width: 40px;
     vertical-align: middle;
+    padding-left: .5em;
 }
 
 .album p{
@@ -360,6 +375,13 @@ p{
     font-size: 14px;
 }
 
+.volume{
+    display: flex;
+}
+
+.volume-over{
+    position: relative;
+}
 
 .volume-song{
     width: 100px;
@@ -379,5 +401,7 @@ p{
     border-radius: 3px;
     display: inline-block;
     vertical-align: middle;
-
+    position: absolute;
+    top: 53%;
+    left: 0;
 }
