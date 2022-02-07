@@ -326,15 +326,39 @@ p{
     height: 6em;
 }
 
+.album{
+    display: flex;
+    justify-content: space-around;
+}
+
 .song .album img{
     width: 40px;
     vertical-align: middle;
     padding-left: .5em;
 }
 
-.album p{
-    display: inline-block;
+.title-img{
+    font-size: 14px;
+    margin-left: .5rem;
 }
+
+.icon-foot{
+    margin-left: 3rem;
+}
+
+.bi-heart,
+.fa-folder{
+    margin-right: .5rem;
+    color: #999999;
+    vertical-align: middle;
+}
+
+.text-img{
+    font-size: 10px;
+    color: #999999;
+    margin-left: .8rem;
+}
+
 .icon-music{
     font-size: 17px;
     text-align: center;
@@ -353,6 +377,11 @@ p{
     margin-right: 1em;
 }
 
+.icon-btn{
+    display: flex;
+    margin-bottom: .7em;
+}
+
 .time-song{
    font-size: 11px; 
 }
@@ -365,7 +394,19 @@ p{
     margin: 0 1em 0 1em;
     display: inline-block;
     vertical-align: middle;
+}
 
+.time-less-one{
+    width: 150px;
+    height: 4px;
+    background-color: rgb(193, 193, 193);
+    border-radius: 3px;
+    margin: 0 1em 0 1em;
+    display: inline-block;
+    vertical-align: middle;
+    position: absolute;
+    top: 53%;
+    left: 0;
 }
 
 .volume .fa-list, 
