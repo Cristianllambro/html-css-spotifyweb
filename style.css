@@ -153,6 +153,10 @@ span{
     cursor: pointer;
 }
 
+.name-install{
+    color: #999999;
+}
+
 .install-app:hover{
     color: white;
 
@@ -242,7 +246,7 @@ main ul li a:hover{
     width: 40px;
     height: 2px;
     background-color: #9ae32e;
-    margin-top: 5px;
+    margin-top: 1px;
     margin-left: 26px;
     text-align: center;
 }
@@ -261,16 +265,14 @@ h2{
 }
 
 .card{
-    max-width: calc(100% / 6 - 1em);
+    max-width: 200px;
     margin-right: 1em;
-    margin-bottom: 1em;
 }
-
-
 
 .card img{
     width: 100%;
 }
+
 
 .fa-play-circle{
     font-size: 60px;
@@ -361,9 +363,6 @@ p{
     margin-right: .5rem;
 }
 
-.bi-heart{
-    margin-left: 3em;
-}
 
 .text-img{
     font-size: 10px;
@@ -448,7 +447,6 @@ p{
     display: flex;
     width: 15%;
     padding-left: .3em;
-    justify-content: flex-end;
 }
 
 .volume-over-one{
@@ -465,6 +463,7 @@ p{
     background-color: rgb(90, 90, 90);
     border-radius: 3px;
     margin-right: .8em;
+    flex: 0 1 auto;
 }
 
 .volume-song-less{
@@ -475,6 +474,7 @@ p{
     position: absolute;
     top: 39%;
     left: 0%;
+    flex: 1 2 auto;
 }
 
 
@@ -482,13 +482,48 @@ p{
 
 @media screen and (max-width: 992px) {
    
-    main ul li a{
+    header{
+        width: 190px;
+    }
+
+    .name-play li{
+        font-size: 13px;
+    }
+
+    .search li{
+        font-size: 13px;
+    }
+
+    .name-install{
+        font-size: 12px;
+    }
+
+    .name-user{
         font-size: 14px;
     }
 
-    .card{
-        width: calc(100% / 4 - 1em);
-        flex-wrap: wrap;
+    main{
+        width: calc(100% - 190px);
+    }
+
+    .top-btn{
+        width: calc(100% - 190px);
+    }
+
+    .song .album{
+        width: 35%;
+    }
+
+    .btn-music{
+        width: 40%;
+    }
+
+    .volume{
+        width: 20%;
+    }
+
+    main ul li a{
+        font-size: 14px;
     }
 
     .under-img{
@@ -508,14 +543,33 @@ p{
 @media screen and (max-width: 768px) {
     .card{
         width: calc(100% / 4 - 1em);
-        flex-wrap: wrap;
         margin-right: 1em;
     }
 
 }
 
 @media screen and (max-width: 576px) {
-    
+    .top-btn{
+        font-size: 13px;
+    }
+
+    .list-top-main li{
+        font-size: 10px;
+        margin-bottom: .5rem;
+    }
+
+    .card{
+        width: calc(100% / 2 - 1em);
+    }
+
+
+    .volume{
+        width: 25%;
+    }
+}
+
+
+@media screen and (max-width: 420px) {
     header{
         width: 60px;
     }
@@ -528,65 +582,64 @@ p{
     .end-header{
         align-items: center;
     }
-
+    
     .install-app{
         text-align: center;
     }
-
+    
     .user{
         text-align: center;
     }
-
+    
     main{
         width: calc(100vw - 60px);
     }
-
+    
     .top-btn{
         width: calc(100vw - 60px);
         font-size: 13px;
         padding: 1rem;
     }
-
+    
     .top.btn a{
         margin-right: 0;
     }
-
+    
     .logo-lg{
         display: none;
     }
-
-
-
+        
     .logo-small{
         display: inline-block;
         width: 30px;
     }
-
+    
     .name-play{
         display: none;
     }
-
+    
     h4{
         display: none;
     }
-
+    
     .search li a{
         display: none;
     }
-
+    
     .add-play{
         display: none;
     }
-
+    
     .name-install{
         display: none;
     }
-
+    
     .line{
         display: none;
     }
-
+    
     .name-user{
         display: none;
     }
+    
 }
