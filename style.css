@@ -47,7 +47,6 @@ span{
     flex-direction: column;
     color: #999999;
     justify-content: space-between;
-    flex: 0 0 100%;
 }
 
 .logo{
@@ -133,7 +132,7 @@ span{
 
 .name-play li{
     font-size: 14px;
-    padding-top: 1em;
+    margin-top: 1em;
     color: #999999;
     cursor: pointer;
 }
@@ -244,7 +243,7 @@ main ul li a:hover{
     height: 2px;
     background-color: #9ae32e;
     margin-top: 5px;
-    margin-left: 35px;
+    margin-left: 26px;
     text-align: center;
 }
 
@@ -262,7 +261,7 @@ h2{
 }
 
 .card{
-    max-width: 200px ;
+    max-width: calc(100% / 6 - 1em);
     margin-right: 1em;
     margin-bottom: 1em;
 }
@@ -326,23 +325,23 @@ p{
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     height: 6em;
 }
 
 .song{
-    width: 30%;
+    width: 15%;
 }
 
 .album{
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .album img{
-    width: 40px;
-    vertical-align: middle;
+    width: 50px;
     padding-left: .5em;
 }
 
@@ -356,13 +355,15 @@ p{
     cursor: pointer;
 }
 
-.bi-heart,
-.fa-folder{
-    margin-right: .5rem;
+.icon-foot i{
     color: #999999;
     vertical-align: middle;
+    margin-right: .5rem;
 }
 
+.bi-heart{
+    margin-left: 3em;
+}
 
 .text-img{
     font-size: 10px;
@@ -371,7 +372,7 @@ p{
 }
 
 .btn-music{
-    width: 70%;
+    width: 40%;
 }
 
 .icon-music{
@@ -417,10 +418,11 @@ p{
 }
 
 .time-line{
-    width: 50%;
+    width: 100%;
     height: 4px;
     background-color: rgb(90, 90, 90);
     border-radius: 3px;
+    margin: 0 1.5em 0 1.5em;
     
 }
 
@@ -431,7 +433,8 @@ p{
     border-radius: 3px;
     position: absolute;
     top: 39%;
-    left: 25%;
+    left: 0%;
+    margin-left: 1.5em;
 }
 
 .volume .fa-list, 
@@ -443,8 +446,9 @@ p{
 
 .volume{
     display: flex;
-    width: 30%;
+    width: 15%;
     padding-left: .3em;
+    justify-content: flex-end;
 }
 
 .volume-over-one{
@@ -452,16 +456,15 @@ p{
     align-items: center;
     position: relative;
     vertical-align: middle;
-    width: 90%;
+    width: 100%;
 }
 
 .volume-song{
-    width: 60%;
+    width: 80%;
     height: 4px;
     background-color: rgb(90, 90, 90);
     border-radius: 3px;
     margin-right: .8em;
-    flex: 1 0 auto;
 }
 
 .volume-song-less{
@@ -471,7 +474,7 @@ p{
     border-radius: 3px;
     position: absolute;
     top: 39%;
-    left: 0;
+    left: 0%;
 }
 
 
@@ -504,8 +507,9 @@ p{
 
 @media screen and (max-width: 768px) {
     .card{
-        width: calc(100% / 6 - 1em);
+        width: calc(100% / 4 - 1em);
         flex-wrap: wrap;
+        margin-right: 1em;
     }
 
 }
@@ -516,6 +520,23 @@ p{
         width: 60px;
     }
     
+    .header-top{
+        align-items: center;
+        padding-right: 0;
+    }
+    
+    .end-header{
+        align-items: center;
+    }
+
+    .install-app{
+        text-align: center;
+    }
+
+    .user{
+        text-align: center;
+    }
+
     main{
         width: calc(100vw - 60px);
     }
