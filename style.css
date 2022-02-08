@@ -482,6 +482,9 @@ p{
 
 @media screen and (max-width: 992px) {
    
+    .card{
+        width: calc(100% / 6 - 1em);
+    }
     header{
         width: 190px;
     }
