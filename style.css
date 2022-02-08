@@ -25,7 +25,7 @@ header{
 main{
     width: calc(100vw - 220px);
     height: calc(100vh - 6em);
-    background-color: #141922;
+    background-color: #081020;
     overflow-y: auto;
 }
 
@@ -197,7 +197,7 @@ span{
 .top-btn{
     width: calc(100vw - 220px);
     height: 4em;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.8);
     
     display: flex;
     justify-content: flex-end;
@@ -331,30 +331,27 @@ p{
     height: 6em;
 }
 
-.song{
-    width: 15%;
-}
-
 .album{
     width: 100%;
     display: flex;
-    justify-content: flex-start;
+    justify-content: start;
     align-items: center;
 }
 
 .album img{
-    width: 50px;
-    padding-left: .5em;
+    width: 70px;
+    padding-left: .5rem;
+    padding-right: .7rem;
 }
 
-.title-img{
-    font-size: 14px;
-    margin-left: .5rem;
-}
 
 .icon-foot i:hover{
     color: white;
     cursor: pointer;
+}
+
+.icon-foot{
+    margin-left: 1.5em;
 }
 
 .icon-foot i{
@@ -364,10 +361,15 @@ p{
 }
 
 
-.text-img{
-    font-size: 10px;
+
+.title-img-foot{
+    font-size: 14px;
+    display: block;
+}
+
+.text-img-foot{
+    font-size: 12px;
     color: #999999;
-    margin-left: .8rem;
 }
 
 .btn-music{
@@ -405,12 +407,10 @@ p{
 }
 
 .volume-under{
-    display: flex;
-    justify-content: center;
-    flex: 1 2 auto;
+    width: 100%;
 
+    display: flex;
     align-items: center;
-    width: 40%;
 
     position: relative;
     vertical-align: middle;
@@ -437,8 +437,8 @@ p{
 }
 
 .volume .fa-list, 
-.fa-desktop,
-.fa-volume-down{
+.volume .fa-desktop,
+.volume .fa-volume-down{
     margin-right: 1.2em;
     font-size: 14px;
 }
@@ -462,8 +462,6 @@ p{
     height: 4px;
     background-color: rgb(90, 90, 90);
     border-radius: 3px;
-    margin-right: .8em;
-    flex: 0 1 auto;
 }
 
 .volume-song-less{
@@ -472,16 +470,21 @@ p{
     background-color: rgb(193, 193, 193);
     border-radius: 3px;
     position: absolute;
-    top: 39%;
+    top: 35%;
     left: 0%;
-    flex: 1 2 auto;
 }
+
+
 
 
 /* media query */
 
 @media screen and (max-width: 992px) {
    
+    h2{
+        font-size: 18px;
+    }
+
     .card{
         width: calc(100% / 6 - 1em);
     }
@@ -513,10 +516,6 @@ p{
         width: calc(100% - 190px);
     }
 
-    .song .album{
-        width: 35%;
-    }
-
     .btn-music{
         width: 40%;
     }
@@ -544,16 +543,66 @@ p{
 }
 
 @media screen and (max-width: 768px) {
+    
+    .top-btn{
+        height: 5em;
+        font-size: 13px;
+    }
+
     .card{
         width: calc(100% / 4 - 1em);
         margin-right: 1em;
     }
 
+    .volume{
+        width: 25%;
+    }
+
+    .icon-btn .time-song{
+        font-size: 11px;
+    }
+
+    .volume .fa-list,
+    .volume .fa-desktop,
+    .volume .fa-volume-down{
+        font-size: 12px;
+        vertical-align: middle;
+    }
+
+    .icon-music{
+        font-size: 14px;
+    }
+
+    .title-img-foot{
+        font-size: 13px;
+    }
+
+    .text-img-foot{
+        font-size: 11px;
+    }
+
+    .icon-foot i{
+        font-size: 14px;
+    }
 }
 
+
 @media screen and (max-width: 576px) {
+    
+    .album{
+        width: 60%;
+    }
+    
+    .volume{
+        width: 30%;
+    }
+
     .top-btn{
         font-size: 13px;
+    }
+
+    .content > h2{
+        margin-top: 2em;
     }
 
     .list-top-main li{
@@ -563,11 +612,25 @@ p{
 
     .card{
         width: calc(100% / 2 - 1em);
+        margin-bottom: .5em;
     }
 
+    .btn-music{
+        width: 40%;
+    }
 
-    .volume{
-        width: 25%;
+    .icon-music .bi-play-circle{
+        margin: 0 1em 0 1em;
+    }
+
+    .time-line{
+        margin: 0 .5em 0 .5em;
+    }
+
+    .time-less-one{
+        position: absolute;
+        top: 39%;
+        left: -9%;
     }
 }
 
@@ -577,8 +640,11 @@ p{
         width: 60px;
     }
     
+    .search li img{
+        padding-right: 0;
+    }
+
     .header-top{
-        align-items: center;
         padding-right: 0;
     }
     
@@ -590,6 +656,10 @@ p{
         text-align: center;
     }
     
+    .install-app .bi-arrow-down-circle{
+        padding-right: 0;
+    }
+
     .user{
         text-align: center;
     }
@@ -600,11 +670,11 @@ p{
     
     .top-btn{
         width: calc(100vw - 60px);
-        font-size: 13px;
+        font-size: 11px;
         padding: 1rem;
     }
     
-    .top.btn a{
+    .top-btn a{
         margin-right: 0;
     }
     
@@ -615,6 +685,7 @@ p{
     .logo-small{
         display: inline-block;
         width: 30px;
+
     }
     
     .name-play{
