@@ -125,9 +125,14 @@ span{
     color: #999999;
 }
 
+.playlist-center{
+    overflow-y: auto;
+}
+
 .name-play{
     padding-left: 1em;
     list-style: none;
+    overflow-y: auto;
 }
 
 .name-play li{
